@@ -1,0 +1,25 @@
+# sbt
+target/
+project/target/
+project/project/
+.bsp/
+
+# Metals / Bloop
+.metals/
+.bloop/
+metals.sbt
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Scala / JVM
+*.class
+*.log
+hs_err_pid*.log
+
+# macOS
+.DS_Store

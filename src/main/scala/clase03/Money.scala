@@ -3,7 +3,10 @@ package clase03
 class Money(val value: Int, val currency: String) {
   def add(other: Money): Money = {
     // asumimos que tenemos la misma divisa
+    // if(currency == other.currency)
     new Money(value + other.value, currency)
+    // else
+    //  new MoneyBag(List(this, other))
   }
   def +(other: Money): Money = add(other)
   override def equals(other: Any): Boolean = {

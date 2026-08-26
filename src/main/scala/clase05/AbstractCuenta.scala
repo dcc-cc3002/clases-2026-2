@@ -6,8 +6,14 @@ import scala.collection.mutable.ListBuffer
   * diferencia entre ambas cuentas es que la cuenta de ahorro tiene una linea de
   * credito que permite girar mas de el saldo disponible.
   */
-
-abstract class AbstractCuenta(val nombre: String, saldoInicial: Int) {
+trait Cuenta {
+  def getSaldo: Int
+  def setSaldo(newSaldo: Int): Unit
+  def depositar(monto: Int): Unit
+  def girar(monto: Int): Boolean
+}
+abstract class AbstractCuenta(val nombre: String, saldoInicial: Int)
+    extends Cuenta {
   private var saldo = saldoInicial
   def getSaldo: Int = saldo
   def setSaldo(newSaldo: Int) = saldo = newSaldo
